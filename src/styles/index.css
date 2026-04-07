@@ -113,3 +113,87 @@ body {
   background-color: #ef4444;
   color: white;
 }
+
+/* Gaya untuk Form Input */
+.note-input {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.note-input__title {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Gaya untuk div contentEditable */
+.note-input__body {
+  min-height: 300px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Efek placeholder buatan untuk contentEditable */
+.note-input__body:empty:before {
+  content: attr(data-placeholder);
+  color: #94a3b8;
+  cursor: text;
+}
+
+.note-input__body:focus {
+  outline: 2px solid #3b82f6;
+  border-color: transparent;
+}
+
+.note-input__button {
+  padding: 12px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.note-input__button:hover {
+  background-color: #2563eb;
+}
+
+/* Gaya khusus tombol di Navigasi */
+.button-add {
+  background-color: #10b981;
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.note-item__archive-button {
+  flex: 1;
+  padding: 8px;
+  background-color: transparent;
+  border: 1px solid #eab308;
+  color: #eab308;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.note-item__archive-button:hover {
+  background-color: #eab308;
+  color: white;
+}

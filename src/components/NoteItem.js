@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import parser from 'html-react-parser';
 import { showFormattedDate } from '../utils/local-data';
 
-function NoteItem({ id, title, createdAt, body, onDelete }) {
+function NoteItem({ id, title, createdAt, body, archived, onDelete, onArchive }) {
   return (
     <div className="note-item">
       <div className="note-item__content">
@@ -19,6 +19,9 @@ function NoteItem({ id, title, createdAt, body, onDelete }) {
         <button className="note-item__delete-button" onClick={() => onDelete(id)}>
           Hapus
         </button>
+        <button className="note-item__archive-button" onClick={() => onArchive(id)}>
+          {archived ? 'Pindahkan' : 'Arsipkan'}
+        </button>
       </div>
     </div>
   );
@@ -29,7 +32,9 @@ NoteItem.propTypes = {
   title: PropTypes.string.isRequired,
   createdAt: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
+  archived: PropTypes.bool.isRequired, // Tambahan properti baru
   onDelete: PropTypes.func.isRequired,
+  onArchive: PropTypes.func.isRequired, // Tambahan properti baru
 };
 
 export default NoteItem;
