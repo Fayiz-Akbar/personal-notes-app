@@ -197,3 +197,22 @@ body {
   background-color: #eab308;
   color: white;
 }
+
+.search-bar input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-family: inherit;
+  margin-bottom: 24px;
+}
+
+.not-found {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.not-found h2 {
+  font-size: 5rem;
+  color: #cbd5e1;
+}
