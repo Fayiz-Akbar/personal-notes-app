@@ -88,3 +88,28 @@ body {
   -webkit-line-clamp: 4; /* Membatasi teks hanya 4 baris di halaman depan */
   -webkit-box-orient: vertical;
 }
+
+.note-item__action {
+  display: flex;
+  gap: 10px;
+  margin-top: auto; /* Mendorong tombol selalu ke bagian bawah kartu */
+  padding-top: 16px;
+}
+
+.note-item__delete-button {
+  flex: 1;
+  padding: 8px;
+  background-color: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.note-item__delete-button:hover {
+  background-color: #ef4444;
+  color: white;
+}

@@ -14,7 +14,6 @@ class DetailPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // Mengambil 1 catatan spesifik berdasarkan id
       note: getNote(props.id)
     };
   }
